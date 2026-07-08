@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Trafford Property Management logo concept 01</title>
+  <desc id="desc">Premium charcoal and gold property management logo with a doorway and building monogram.</desc>
+  <defs>
+    <style>
+      .charcoal { fill: #242424; }
+      .gold { fill: #b58a3b; }
+      .gold-stroke { stroke: #b58a3b; }
+      .charcoal-stroke { stroke: #242424; }
+      .serif { font-family: Georgia, "Times New Roman", serif; }
+      .sans { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="420" fill="#f7f3ec"/>
+  <g transform="translate(96 72)">
+    <rect x="0" y="0" width="276" height="276" rx="0" fill="none" class="gold-stroke" stroke-width="8"/>
+    <path d="M69 225V71h138v154h-34V104H103v121z" class="charcoal"/>
+    <path d="M116 225V132h44v93z" class="gold"/>
+    <path d="M76 71h124L177 40H99z" class="gold"/>
+    <rect x="111" y="94" width="16" height="16" class="gold"/>
+    <rect x="150" y="94" width="16" height="16" class="gold"/>
+  </g>
+  <g transform="translate(436 128)">
+    <text x="0" y="0" class="charcoal serif" font-size="72" letter-spacing="1">Trafford</text>
+    <text x="2" y="74" class="charcoal serif" font-size="43" letter-spacing="0.5">Property Management</text>
+    <rect x="4" y="104" width="504" height="3" class="gold"/>
+    <text x="4" y="144" class="charcoal sans" font-size="19" letter-spacing="5">LANDLORDS  |  COMMERCIAL PROPERTY</text>
+  </g>
+</svg>

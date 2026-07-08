@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Trafford Stays property image placeholder</title>
+  <desc id="desc">A refined illustrated townhouse facade used as a placeholder for future property photography.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef3f5"/>
+      <stop offset="1" stop-color="#f8f4ec"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <rect x="130" y="118" width="940" height="522" fill="#fffdfa" stroke="#e5dbc8" stroke-width="4"/>
+  <rect x="186" y="172" width="828" height="414" fill="#f6f2ea" stroke="#d9c28c" stroke-width="3"/>
+  <path d="M238 586V258h214v328z" fill="#fffdfa" stroke="#b59b65" stroke-width="5"/>
+  <path d="M494 586V258h214v328z" fill="#fffdfa" stroke="#b59b65" stroke-width="5"/>
+  <path d="M750 586V258h214v328z" fill="#fffdfa" stroke="#b59b65" stroke-width="5"/>
+  <rect x="274" y="306" width="56" height="78" fill="#5c7f9f" opacity="0.82"/>
+  <rect x="360" y="306" width="56" height="78" fill="#5c7f9f" opacity="0.82"/>
+  <rect x="530" y="306" width="56" height="78" fill="#5c7f9f" opacity="0.82"/>
+  <rect x="616" y="306" width="56" height="78" fill="#5c7f9f" opacity="0.82"/>
+  <rect x="786" y="306" width="56" height="78" fill="#5c7f9f" opacity="0.82"/>
+  <rect x="872" y="306" width="56" height="78" fill="#5c7f9f" opacity="0.82"/>
+  <rect x="316" y="444" width="76" height="142" fill="#464646"/>
+  <rect x="574" y="444" width="76" height="142" fill="#464646"/>
+  <rect x="830" y="444" width="76" height="142" fill="#464646"/>
+  <rect x="210" y="622" width="780" height="18" fill="#b59b65"/>
+  <text x="600" y="705" fill="#6c6a66" font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="7" text-anchor="middle">PROPERTY PHOTOGRAPHY TO FOLLOW</text>
+</svg>

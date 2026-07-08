@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Trafford Property Management logo concept 03</title>
+  <desc id="desc">Minimal premium wordmark for Trafford Property Management with a gold doorway detail.</desc>
+  <defs>
+    <style>
+      .charcoal { fill: #26211d; }
+      .gold { fill: #ad8435; }
+      .gold-stroke { stroke: #ad8435; }
+      .serif { font-family: Georgia, "Times New Roman", serif; }
+      .sans { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="420" fill="#f8f8f6"/>
+  <g transform="translate(110 100)">
+    <text x="0" y="90" class="charcoal serif" font-size="82">Trafford</text>
+    <text x="4" y="150" class="charcoal sans" font-size="34" letter-spacing="4">PROPERTY MANAGEMENT</text>
+    <g transform="translate(0 188)">
+      <rect x="4" y="0" width="356" height="3" class="gold"/>
+      <path d="M395 70V0h52v70h-13V13h-26v57z" class="charcoal"/>
+      <path d="M411 70V33h20v37z" class="gold"/>
+      <rect x="482" y="0" width="356" height="3" class="gold"/>
+    </g>
+  </g>
+</svg>

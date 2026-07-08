@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Trafford Property Management logo concept 04</title>
+  <desc id="desc">Light grey and gold Trafford Property Management logo combining concept 01 wording with concept 03 doorway detail.</desc>
+  <defs>
+    <style>
+      .grey { fill: #666a6d; }
+      .gold { fill: #b58a3b; }
+      .gold-stroke { stroke: #b58a3b; }
+      .serif { font-family: Georgia, "Times New Roman", serif; }
+      .sans { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="420" fill="#f6f6f3"/>
+  <g transform="translate(132 82)">
+    <text x="0" y="72" class="grey serif" font-size="72" letter-spacing="1">Trafford</text>
+    <text x="2" y="146" class="grey serif" font-size="43" letter-spacing="0.5">Property Management</text>
+    <g transform="translate(2 184)">
+      <rect x="0" y="0" width="356" height="3" class="gold"/>
+      <path d="M396 72V0h54v72h-13V13h-28v59z" class="grey"/>
+      <path d="M413 72V34h20v38z" class="gold"/>
+      <rect x="488" y="0" width="356" height="3" class="gold"/>
+    </g>
+    <text x="4" y="292" class="grey sans" font-size="19" letter-spacing="5">LANDLORDS  |  COMMERCIAL PROPERTY</text>
+  </g>
+</svg>

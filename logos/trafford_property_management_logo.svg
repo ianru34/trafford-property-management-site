@@ -1,0 +1,88 @@
+<svg width="680" height="320" viewBox="0 0 680 320" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Trafford Property Management logo — classical building mark</title>
+  <desc>Elegant logo with a neoclassical columned building in navy and gold serif lettering on a warm white background</desc>
+
+  <!-- Card background -->
+  <rect x="60" y="30" width="560" height="260" rx="12" fill="#FDFAF5" stroke="#E8E0D0" stroke-width="0.5"/>
+  <!-- Gold top accent -->
+  <rect x="60" y="30" width="560" height="3" rx="1.5" fill="#B8952A"/>
+
+  <!-- ===== CLASSICAL BUILDING MARK ===== -->
+  <g transform="translate(118, 62)">
+
+    <!-- Steps / podium base (3 steps) -->
+    <rect x="0"  y="128" width="130" height="7"  rx="0" fill="#0D2545"/>
+    <rect x="5"  y="121" width="120" height="7"  rx="0" fill="#0D2545"/>
+    <rect x="11" y="114" width="108" height="7"  rx="0" fill="#0D2545"/>
+
+    <!-- Main building body -->
+    <rect x="17" y="52" width="96" height="62" rx="0" fill="#0D2545"/>
+
+    <!-- Pediment (triangular top) -->
+    <polygon points="6,52 65,10 124,52" fill="#0D2545"/>
+    <!-- Pediment inner triangle (lighter recess) -->
+    <polygon points="22,52 65,22 108,52" fill="#1A3A63"/>
+
+    <!-- Entablature (band below pediment, above columns) -->
+    <rect x="6" y="49" width="118" height="8" rx="0" fill="#0D2545"/>
+
+    <!-- Gold cornice line at top of entablature -->
+    <line x1="6" y1="49" x2="124" y2="49" stroke="#B8952A" stroke-width="1.2"/>
+    <line x1="6" y1="57" x2="124" y2="57" stroke="#B8952A" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- 6 Columns -->
+    <rect x="17"  y="57" width="9" height="57" rx="0" fill="#1A3A63"/>
+    <rect x="17"  y="57" width="9" height="3"  rx="0" fill="#B8952A" opacity="0.7"/>
+    <rect x="17"  y="111" width="9" height="3" rx="0" fill="#B8952A" opacity="0.7"/>
+
+    <rect x="36"  y="57" width="9" height="57" rx="0" fill="#1A3A63"/>
+    <rect x="36"  y="57" width="9" height="3"  rx="0" fill="#B8952A" opacity="0.7"/>
+    <rect x="36"  y="111" width="9" height="3" rx="0" fill="#B8952A" opacity="0.7"/>
+
+    <rect x="55"  y="57" width="9" height="57" rx="0" fill="#1A3A63"/>
+    <rect x="55"  y="57" width="9" height="3"  rx="0" fill="#B8952A" opacity="0.7"/>
+    <rect x="55"  y="111" width="9" height="3" rx="0" fill="#B8952A" opacity="0.7"/>
+
+    <rect x="74"  y="57" width="9" height="57" rx="0" fill="#1A3A63"/>
+    <rect x="74"  y="57" width="9" height="3"  rx="0" fill="#B8952A" opacity="0.7"/>
+    <rect x="74"  y="111" width="9" height="3" rx="0" fill="#B8952A" opacity="0.7"/>
+
+    <rect x="93"  y="57" width="9" height="57" rx="0" fill="#1A3A63"/>
+    <rect x="93"  y="57" width="9" height="3"  rx="0" fill="#B8952A" opacity="0.7"/>
+    <rect x="93"  y="111" width="9" height="3" rx="0" fill="#B8952A" opacity="0.7"/>
+
+    <rect x="104" y="57" width="9" height="57" rx="0" fill="#1A3A63"/>
+    <rect x="104" y="57" width="9" height="3"  rx="0" fill="#B8952A" opacity="0.7"/>
+    <rect x="104" y="111" width="9" height="3" rx="0" fill="#B8952A" opacity="0.7"/>
+
+    <!-- Central door arch -->
+    <rect x="51" y="82" width="28" height="32" rx="0" fill="#FDFAF5"/>
+    <ellipse cx="65" cy="82" rx="14" ry="9" fill="#FDFAF5"/>
+    <!-- Door inner detail -->
+    <rect x="55" y="90" width="20" height="24" rx="0" fill="#E8E0D0"/>
+    <ellipse cx="65" cy="90" rx="10" ry="6" fill="#E8E0D0"/>
+    <!-- Door handle -->
+    <circle cx="72" cy="103" r="1.5" fill="#B8952A"/>
+
+    <!-- Gold keystone in pediment -->
+    <polygon points="59,32 65,16 71,32" fill="#B8952A" opacity="0.9"/>
+
+    <!-- Ground line -->
+    <line x1="-4" y1="135" x2="134" y2="135" stroke="#0D2545" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="6"  y1="138" x2="124" y2="138" stroke="#0D2545" stroke-width="0.5" stroke-linecap="round" opacity="0.3"/>
+
+  </g>
+
+  <!-- ===== WORDMARK ===== -->
+  <text x="318" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#B8952A" letter-spacing="3" text-anchor="start">TRAFFORD</text>
+
+  <!-- Divider -->
+  <line x1="318" y1="132" x2="610" y2="132" stroke="#0D2545" stroke-width="0.7" opacity="0.35"/>
+
+  <!-- Property Management -->
+  <text x="318" y="153" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-weight="400" fill="#0D2545" letter-spacing="4.5" text-anchor="start">PROPERTY MANAGEMENT</text>
+
+  <!-- Tagline -->
+  <text x="319" y="182" font-family="Georgia, 'Times New Roman', serif" font-size="10.5" font-weight="400" fill="#C9A84C" letter-spacing="1.5" text-anchor="start" font-style="italic">Managing your property with care</text>
+
+</svg>
