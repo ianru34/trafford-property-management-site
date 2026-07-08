@@ -503,8 +503,9 @@ h3 {
   display: block;
   overflow-wrap: anywhere;
   color: var(--paper);
-  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  font-size: clamp(0.9rem, 1.35vw, 1.05rem);
   line-height: 1.5;
+  white-space: nowrap;
   text-decoration: underline;
   text-decoration-color: rgb(217 194 140 / 0.6);
   text-underline-offset: 7px;
@@ -952,5 +953,9 @@ h3 {
   .process-list li {
     grid-template-columns: 1fr;
     gap: 10px;
+  }
+
+  .contact-panel a {
+    white-space: normal;
   }
 }
