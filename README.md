@@ -54,5 +54,5 @@ git switch -c codex/booking-calendar
 ## Contact Details
 
 - Information requests: `info@traffordpropertymanagement.co.uk`
-- General enquiries: `contact@traffordpropertymanagement.co.uk`
+- General enquiries: `enquiries@traffordpropertymanagement.co.uk`
 - Phone: `+44 01789 863933`
