@@ -24,6 +24,14 @@ optional_files=(
   "public/window.svg"
 )
 
+remote_dirs=(
+  "app"
+  "public"
+  "stays"
+  "properties"
+  "properties/stratford-townhouse"
+)
+
 echo "Checking local files..."
 missing=0
 for file in "${required_files[@]}"; do
@@ -39,18 +47,19 @@ if [[ "$missing" -ne 0 ]]; then
 fi
 
 batch_file="$(mktemp "${TMPDIR:-/tmp}/tpm-deploy.XXXXXX.sftp")"
+raw_log_file="$(mktemp "${TMPDIR:-/tmp}/tpm-deploy.XXXXXX.raw.log")"
 cleanup() {
   rm -f "$batch_file"
+  rm -f "$raw_log_file"
 }
 trap cleanup EXIT
 
 {
   echo "cd $REMOTE_ROOT"
-  echo "-mkdir app"
-  echo "-mkdir public"
-  echo "-mkdir stays"
-  echo "-mkdir properties"
-  echo "-mkdir properties/stratford-townhouse"
+  for dir in "${remote_dirs[@]}"; do
+    # The leading dash tells sftp not to abort if the folder already exists.
+    echo "-mkdir $dir"
+  done
   echo "put index.html index.html"
   echo "put app/globals.css app/globals.css"
   echo "put public/favicon.svg public/favicon.svg"
@@ -70,7 +79,17 @@ trap cleanup EXIT
 echo "Deploying to $SFTP_HOST:$REMOTE_ROOT ..."
 echo "Writing log to $LOG_FILE"
 
-if sftp -F "$SFTP_CONFIG" -b "$batch_file" "$SFTP_HOST" > "$LOG_FILE" 2>&1; then
+if sftp -F "$SFTP_CONFIG" -b "$batch_file" "$SFTP_HOST" > "$raw_log_file" 2>&1; then
+  {
+    echo "Deploy target: $SFTP_HOST:$REMOTE_ROOT"
+    echo "Deploy time: $(date)"
+    echo
+    echo "Note: sftp may report existing folders as generic mkdir errors."
+    echo "      Those expected mkdir lines are converted to INFO below."
+    echo
+    perl -pe 's/^remote mkdir "([^"]+)": Failure\r?$/INFO: remote folder already exists: $1/' "$raw_log_file"
+  } > "$LOG_FILE"
+
   echo "Deploy completed successfully."
   echo "Uploaded files:"
   printf '  %s\n' "${required_files[@]}"
@@ -79,14 +98,21 @@ if sftp -F "$SFTP_CONFIG" -b "$batch_file" "$SFTP_HOST" > "$LOG_FILE" 2>&1; then
   done
 else
   status=$?
+  {
+    echo "Deploy target: $SFTP_HOST:$REMOTE_ROOT"
+    echo "Deploy time: $(date)"
+    echo
+    cat "$raw_log_file"
+  } > "$LOG_FILE"
+
   echo "Deploy failed with exit code $status." >&2
   echo "Last 40 lines from $LOG_FILE:" >&2
   tail -n 40 "$LOG_FILE" >&2
   exit "$status"
 fi
 
-if grep -E "Couldn't|No such file|Permission denied|not found" "$LOG_FILE" >/dev/null 2>&1; then
+if grep -E "Couldn't|No such file|Permission denied|not found|Failure" "$LOG_FILE" | grep -v "^INFO: remote folder already exists:" >/dev/null 2>&1; then
   echo "Deploy completed, but the log contains warnings/errors to review:" >&2
-  grep -E "Couldn't|No such file|Permission denied|not found" "$LOG_FILE" >&2
+  grep -E "Couldn't|No such file|Permission denied|not found|Failure" "$LOG_FILE" | grep -v "^INFO: remote folder already exists:" >&2
   exit 2
 fi
