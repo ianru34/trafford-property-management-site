@@ -436,6 +436,63 @@ h3 {
   line-height: 1.7;
 }
 
+.location-feature {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, var(--paper) 0 58%, var(--warm-paper) 58% 100%);
+}
+
+.location-feature-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.72fr);
+  gap: clamp(34px, 6vw, 84px);
+  align-items: center;
+}
+
+.location-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.location-copy h2 {
+  max-width: 760px;
+}
+
+.location-copy > p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 28px 0 0;
+  color: var(--soft-ink);
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.floating-image-panel {
+  position: relative;
+  z-index: 1;
+  justify-self: end;
+  width: min(430px, 100%);
+}
+
+.floating-image-panel::before {
+  content: "";
+  position: absolute;
+  inset: 28px -28px -28px 28px;
+  border: 1px solid rgb(181 155 101 / 0.48);
+  background: rgb(255 253 250 / 0.48);
+}
+
+.floating-image-panel img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  box-shadow: 0 28px 80px rgb(70 70 70 / 0.14);
+}
+
 .area-list {
   display: flex;
   flex-wrap: wrap;
@@ -827,6 +884,7 @@ h3 {
   .intro-grid,
   .approach-grid,
   .contact-grid,
+  .location-feature-grid,
   .sub-hero-grid,
   .property-hero-grid,
   .feature-grid,
@@ -841,6 +899,15 @@ h3 {
 
   .sticky-panel {
     position: static;
+  }
+
+  .location-feature {
+    background: var(--paper);
+  }
+
+  .floating-image-panel {
+    justify-self: start;
+    width: min(520px, 100%);
   }
 
   .intro-stat {
@@ -959,6 +1026,10 @@ h3 {
 
   .sub-hero .hero-copy {
     width: 100%;
+  }
+
+  .floating-image-panel::before {
+    inset: 18px -14px -18px 14px;
   }
 
   .service-card {
