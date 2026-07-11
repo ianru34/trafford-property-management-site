@@ -13,6 +13,13 @@ required_files=(
   "public/trafford-property-management-logo.png"
   "public/stays-property-placeholder.svg"
   "public/warwickshire-cotswolds-door.jpg"
+  "public/benefit-management-photo.jpg"
+  "public/benefit-revenue-photo.jpg"
+  "public/benefit-bookings-photo.jpg"
+  "public/benefit-maintenance-photo.jpg"
+  "public/benefit-communication-photo.jpg"
+  "public/benefit-marketing-photo.jpg"
+  "landlords/index.html"
   "stays/index.html"
   "properties/index.html"
   "properties/stratford-townhouse/index.html"
@@ -27,6 +34,7 @@ optional_files=(
 remote_dirs=(
   "app"
   "public"
+  "landlords"
   "stays"
   "properties"
   "properties/stratford-townhouse"
@@ -66,11 +74,18 @@ trap cleanup EXIT
   echo "put public/trafford-property-management-logo.png public/trafford-property-management-logo.png"
   echo "put public/stays-property-placeholder.svg public/stays-property-placeholder.svg"
   echo "put public/warwickshire-cotswolds-door.jpg public/warwickshire-cotswolds-door.jpg"
+  echo "put public/benefit-management-photo.jpg public/benefit-management-photo.jpg"
+  echo "put public/benefit-revenue-photo.jpg public/benefit-revenue-photo.jpg"
+  echo "put public/benefit-bookings-photo.jpg public/benefit-bookings-photo.jpg"
+  echo "put public/benefit-maintenance-photo.jpg public/benefit-maintenance-photo.jpg"
+  echo "put public/benefit-communication-photo.jpg public/benefit-communication-photo.jpg"
+  echo "put public/benefit-marketing-photo.jpg public/benefit-marketing-photo.jpg"
   for file in "${optional_files[@]}"; do
     if [[ -f "$file" ]]; then
       echo "put $file $file"
     fi
   done
+  echo "put landlords/index.html landlords/index.html"
   echo "put stays/index.html stays/index.html"
   echo "put properties/index.html properties/index.html"
   echo "put properties/stratford-townhouse/index.html properties/stratford-townhouse/index.html"

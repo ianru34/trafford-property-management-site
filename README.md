@@ -1,8 +1,8 @@
 # Trafford Property Management Website
 
 A static website for Trafford Property Management and Trafford Stays. The files
-are structured so they can be uploaded directly to GoDaddy hosting, while Git
-tracks the source changes between uploads.
+are structured for direct deployment to GoDaddy cPanel hosting, while Git tracks
+the source changes between uploads.
 
 ## Static Website Files
 
@@ -13,15 +13,20 @@ tracks the source changes between uploads.
 - `app/globals.css`: shared brand palette, typography, layout, and responsive styling
 - `public/`: logo, favicon, and shared image assets
 
-## Review Package
+## Deployment
 
-The review/upload zip is generated output and is ignored by Git:
+Deploy to cPanel `public_html` over SFTP:
 
 ```bash
-zip -r Trafford-Property-Management-website-review.zip index.html app/globals.css public stays properties
+./deploy.sh
 ```
 
-Do not commit the zip. Commit the source files listed above instead.
+The script uses the local SSH config alias `tpm-cpanel`, uploads only the static
+site files, writes `deploy-cpanel.log`, and ignores expected existing-folder
+messages from `mkdir`.
+
+The deploy log and any old zip archives are generated output and should not be
+committed. Commit the source files instead.
 
 ## Recommended Git Workflow
 
@@ -35,7 +40,7 @@ git diff
 Commit a finished change:
 
 ```bash
-git add index.html app/globals.css public stays properties README.md .gitignore .gitattributes
+git add index.html app/globals.css public landlords stays properties deploy.sh README.md .gitignore .gitattributes
 git commit -m "Describe the website change"
 ```
 
