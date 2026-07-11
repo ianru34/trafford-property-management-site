@@ -19,6 +19,7 @@ required_files=(
   "public/benefit-maintenance-photo.jpg"
   "public/benefit-communication-photo.jpg"
   "public/benefit-marketing-photo.jpg"
+  "public/onboarding-property-photo.jpg"
   "landlords/index.html"
   "stays/index.html"
   "properties/index.html"
@@ -80,6 +81,7 @@ trap cleanup EXIT
   echo "put public/benefit-maintenance-photo.jpg public/benefit-maintenance-photo.jpg"
   echo "put public/benefit-communication-photo.jpg public/benefit-communication-photo.jpg"
   echo "put public/benefit-marketing-photo.jpg public/benefit-marketing-photo.jpg"
+  echo "put public/onboarding-property-photo.jpg public/onboarding-property-photo.jpg"
   for file in "${optional_files[@]}"; do
     if [[ -f "$file" ]]; then
       echo "put $file $file"
