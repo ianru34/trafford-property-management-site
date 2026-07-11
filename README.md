@@ -30,6 +30,19 @@ committed. Commit the source files instead.
 
 ## Recommended Git Workflow
 
+This repo pushes to GitHub using the local SSH config file `~/.ssh/github-tpm`.
+The current remote is:
+
+```bash
+origin git@github-tpm:ianru34/trafford-property-management-site.git
+```
+
+The repo-local SSH command should be:
+
+```bash
+git config --local core.sshCommand "ssh -F ~/.ssh/github-tpm"
+```
+
 Check the current changes:
 
 ```bash
@@ -42,6 +55,7 @@ Commit a finished change:
 ```bash
 git add index.html app/globals.css public landlords stays properties deploy.sh README.md .gitignore .gitattributes
 git commit -m "Describe the website change"
+git push
 ```
 
 Tag the exact version uploaded to GoDaddy:
