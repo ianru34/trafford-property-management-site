@@ -1227,9 +1227,10 @@ h3 {
 
   .nav-links {
     width: 100%;
-    gap: 8px 14px;
-    font-size: 0.66rem;
-    letter-spacing: 0.12em;
+    gap: 8px 12px;
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
   }
 
   .header-cta {
