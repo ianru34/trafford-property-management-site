@@ -21,6 +21,7 @@ required_files=(
   "public/benefit-marketing-photo.jpg"
   "public/onboarding-property-photo.jpg"
   "public/property-redress-scheme-logo.png"
+  "public/ico-registered-badge.png"
   "public/property-redress-scheme-certificate.pdf"
   "public/ico-registration-certificate-zc196423.pdf"
   "landlords/index.html"
@@ -86,6 +87,7 @@ trap cleanup EXIT
   echo "put public/benefit-marketing-photo.jpg public/benefit-marketing-photo.jpg"
   echo "put public/onboarding-property-photo.jpg public/onboarding-property-photo.jpg"
   echo "put public/property-redress-scheme-logo.png public/property-redress-scheme-logo.png"
+  echo "put public/ico-registered-badge.png public/ico-registered-badge.png"
   echo "put public/property-redress-scheme-certificate.pdf public/property-redress-scheme-certificate.pdf"
   echo "put public/ico-registration-certificate-zc196423.pdf public/ico-registration-certificate-zc196423.pdf"
   for file in "${optional_files[@]}"; do
