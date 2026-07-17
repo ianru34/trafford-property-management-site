@@ -20,6 +20,9 @@ required_files=(
   "public/benefit-communication-photo.jpg"
   "public/benefit-marketing-photo.jpg"
   "public/onboarding-property-photo.jpg"
+  "public/property-redress-scheme-logo.png"
+  "public/property-redress-scheme-certificate.pdf"
+  "public/ico-registration-certificate-zc196423.pdf"
   "landlords/index.html"
   "stays/index.html"
   "properties/index.html"
@@ -82,6 +85,9 @@ trap cleanup EXIT
   echo "put public/benefit-communication-photo.jpg public/benefit-communication-photo.jpg"
   echo "put public/benefit-marketing-photo.jpg public/benefit-marketing-photo.jpg"
   echo "put public/onboarding-property-photo.jpg public/onboarding-property-photo.jpg"
+  echo "put public/property-redress-scheme-logo.png public/property-redress-scheme-logo.png"
+  echo "put public/property-redress-scheme-certificate.pdf public/property-redress-scheme-certificate.pdf"
+  echo "put public/ico-registration-certificate-zc196423.pdf public/ico-registration-certificate-zc196423.pdf"
   for file in "${optional_files[@]}"; do
     if [[ -f "$file" ]]; then
       echo "put $file $file"

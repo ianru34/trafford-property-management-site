@@ -590,6 +590,80 @@ h3 {
   margin-top: 26px;
 }
 
+.site-footer {
+  padding: clamp(42px, 7vw, 76px) 0;
+  border-top: 1px solid rgb(217 194 140 / 0.32);
+  background: #263b4a;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.58fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: center;
+}
+
+.site-footer .eyebrow {
+  margin-bottom: 16px;
+  color: #d9c28c;
+}
+
+.site-footer p:not(.eyebrow) {
+  max-width: 600px;
+  margin: 0;
+  color: rgb(255 253 250 / 0.72);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.footer-compliance-detail {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+  color: rgb(255 253 250 / 0.76);
+}
+
+.footer-compliance-detail strong {
+  color: var(--paper);
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.footer-compliance-detail span {
+  color: rgb(255 253 250 / 0.7);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-compliance-detail a {
+  width: fit-content;
+  color: #d9c28c;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-decoration-color: rgb(217 194 140 / 0.6);
+  text-underline-offset: 7px;
+}
+
+.footer-logo-strip {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer-logo-strip img {
+  display: block;
+  max-width: min(260px, 100%);
+  height: auto;
+  padding: 14px 18px;
+  border: 1px solid rgb(255 253 250 / 0.18);
+  background: rgb(255 253 250 / 0.96);
+}
+
 .sub-hero {
   position: relative;
   overflow: hidden;
@@ -1170,6 +1244,7 @@ h3 {
   .intro-grid,
   .approach-grid,
   .contact-grid,
+  .footer-grid,
   .location-feature-grid,
   .landlord-hero-grid,
   .landlord-service-grid,
@@ -1353,5 +1428,9 @@ h3 {
 
   .contact-panel a {
     white-space: normal;
+  }
+
+  .footer-logo-strip {
+    justify-content: flex-start;
   }
 }
