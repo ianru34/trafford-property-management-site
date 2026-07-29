@@ -707,7 +707,8 @@ h3 {
 .privacy-content h2 {
   margin-top: 34px;
   margin-bottom: 12px;
-  font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  line-height: 1.12;
 }
 
 .privacy-content p {
@@ -751,6 +752,11 @@ h3 {
 .compact-hero .hero-copy {
   margin-left: auto;
   margin-right: auto;
+}
+
+.privacy-hero h1 {
+  font-size: clamp(2.35rem, 5vw, 4.25rem);
+  line-height: 1;
 }
 
 .booking-panel {
