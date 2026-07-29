@@ -648,6 +648,16 @@ h3 {
   text-underline-offset: 7px;
 }
 
+.footer-privacy-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: #d9c28c;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-decoration-color: rgb(217 194 140 / 0.6);
+  text-underline-offset: 7px;
+}
+
 .footer-logo-strip {
   display: flex;
   flex-wrap: wrap;
@@ -674,6 +684,44 @@ h3 {
     linear-gradient(rgb(255 253 250 / 0.88), rgb(255 253 250 / 0.96)),
     radial-gradient(circle at 78% 20%, rgb(92 127 159 / 0.14), transparent 31%),
     var(--paper);
+}
+
+.privacy-section {
+  padding-top: clamp(72px, 9vw, 112px);
+  padding-bottom: clamp(72px, 9vw, 112px);
+}
+
+.privacy-content {
+  max-width: 860px;
+}
+
+.privacy-updated {
+  margin: 0 0 34px;
+  color: var(--gold-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.privacy-content h2 {
+  margin-top: 34px;
+  margin-bottom: 12px;
+  font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+}
+
+.privacy-content p {
+  margin: 0;
+  color: var(--soft-ink);
+  font-size: 1rem;
+  line-height: 1.82;
+}
+
+.privacy-content a {
+  color: var(--blue-dark);
+  text-decoration: underline;
+  text-decoration-color: rgb(49 84 111 / 0.35);
+  text-underline-offset: 6px;
 }
 
 .stays-hero {

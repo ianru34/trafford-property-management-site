@@ -26,6 +26,7 @@ required_files=(
   "public/ico-registered-badge.png"
   "public/property-redress-scheme-certificate.pdf"
   "public/ico-registration-certificate-zc196423.pdf"
+  "privacy/index.html"
   "landlords/index.html"
   "stays/index.html"
   "properties/index.html"
@@ -41,6 +42,7 @@ optional_files=(
 remote_dirs=(
   "app"
   "public"
+  "privacy"
   "landlords"
   "stays"
   "properties"
@@ -99,6 +101,7 @@ trap cleanup EXIT
       echo "put $file $file"
     fi
   done
+  echo "put privacy/index.html privacy/index.html"
   echo "put landlords/index.html landlords/index.html"
   echo "put stays/index.html stays/index.html"
   echo "put properties/index.html properties/index.html"
