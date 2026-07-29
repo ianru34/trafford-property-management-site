@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://traffordpropertymanagement.co.uk/sitemap.xml

@@ -8,6 +8,8 @@ LOG_FILE="${LOG_FILE:-deploy-cpanel.log}"
 
 required_files=(
   "index.html"
+  "sitemap.xml"
+  "robots.txt"
   "app/globals.css"
   "public/favicon.svg"
   "public/trafford-property-management-logo.png"
@@ -74,6 +76,8 @@ trap cleanup EXIT
     echo "-mkdir $dir"
   done
   echo "put index.html index.html"
+  echo "put sitemap.xml sitemap.xml"
+  echo "put robots.txt robots.txt"
   echo "put app/globals.css app/globals.css"
   echo "put public/favicon.svg public/favicon.svg"
   echo "put public/trafford-property-management-logo.png public/trafford-property-management-logo.png"
