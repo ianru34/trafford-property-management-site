@@ -759,6 +759,46 @@ h3 {
   line-height: 1;
 }
 
+.thank-you-hero h1 {
+  font-size: clamp(2.65rem, 6vw, 5rem);
+  line-height: 1;
+}
+
+.thank-you-section {
+  padding-top: clamp(72px, 9vw, 112px);
+  padding-bottom: clamp(72px, 9vw, 112px);
+}
+
+.thank-you-panel {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 52px);
+  border: 1px solid rgb(181 155 101 / 0.42);
+  background: rgb(255 253 250 / 0.84);
+  box-shadow: 0 26px 72px rgb(70 70 70 / 0.08);
+  text-align: center;
+}
+
+.thank-you-panel h2 {
+  font-size: clamp(2rem, 4vw, 3.35rem);
+}
+
+.thank-you-panel p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 20px auto 0;
+  color: var(--soft-ink);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.thank-you-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
 .booking-panel {
   padding: clamp(26px, 4vw, 40px);
   border: 1px solid rgb(181 155 101 / 0.52);
@@ -946,6 +986,10 @@ h3 {
   font-size: clamp(1.2rem, 2.2vw, 1.65rem);
   overflow-wrap: anywhere;
   text-decoration: none;
+}
+
+.assessment-actions {
+  margin-top: 24px;
 }
 
 .assessment-steps {

@@ -27,6 +27,7 @@ required_files=(
   "public/property-redress-scheme-certificate.pdf"
   "public/ico-registration-certificate-zc196423.pdf"
   "privacy/index.html"
+  "thank-you/index.html"
   "landlords/index.html"
   "stays/index.html"
   "properties/index.html"
@@ -43,6 +44,7 @@ remote_dirs=(
   "app"
   "public"
   "privacy"
+  "thank-you"
   "landlords"
   "stays"
   "properties"
@@ -102,6 +104,7 @@ trap cleanup EXIT
     fi
   done
   echo "put privacy/index.html privacy/index.html"
+  echo "put thank-you/index.html thank-you/index.html"
   echo "put landlords/index.html landlords/index.html"
   echo "put stays/index.html stays/index.html"
   echo "put properties/index.html properties/index.html"
