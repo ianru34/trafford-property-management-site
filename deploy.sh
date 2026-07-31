@@ -8,6 +8,7 @@ LOG_FILE="${LOG_FILE:-deploy-cpanel.log}"
 
 required_files=(
   "index.html"
+  "googleebdd628ec08cbb14.html"
   "sitemap.xml"
   "robots.txt"
   "app/globals.css"
@@ -80,6 +81,7 @@ trap cleanup EXIT
     echo "-mkdir $dir"
   done
   echo "put index.html index.html"
+  echo "put googleebdd628ec08cbb14.html googleebdd628ec08cbb14.html"
   echo "put sitemap.xml sitemap.xml"
   echo "put robots.txt robots.txt"
   echo "put app/globals.css app/globals.css"
