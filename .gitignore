@@ -22,6 +22,10 @@
 *.pem
 *.zip
 
+# local working assets not used by the website
+/output/
+/logos/trafford-airbnb-*
+
 # debug
 npm-debug.log*
 yarn-debug.log*
