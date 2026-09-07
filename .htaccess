@@ -2,3 +2,8 @@ RewriteEngine On
 
 RewriteCond %{HTTP_HOST} ^www\.traffordpropertymanagement\.co\.uk$ [NC]
 RewriteRule ^(.*)$ https://traffordpropertymanagement.co.uk/$1 [R=301,L]
+
+RewriteRule ^landlords/?(index\.html)?$ https://traffordpropertymanagement.co.uk/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
