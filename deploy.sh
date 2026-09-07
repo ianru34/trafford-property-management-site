@@ -26,6 +26,10 @@ required_files=(
   "public/onboarding-property-photo.jpg"
   "public/property-redress-scheme-logo.png"
   "public/ico-registered-badge.png"
+  "public/lauren-moss-business-card-qr.svg"
+  "public/lauren-moss-business-card-qr.png"
+  "business-card/index.html"
+  "business-card/lauren-moss.vcf"
   "public/property-redress-scheme-certificate.pdf"
   "public/ico-registration-certificate-zc196423.pdf"
   "privacy/index.html"
@@ -45,6 +49,7 @@ optional_files=(
 remote_dirs=(
   "app"
   "public"
+  "business-card"
   "privacy"
   "thank-you"
   "landlords"
@@ -100,6 +105,8 @@ trap cleanup EXIT
   echo "put public/onboarding-property-photo.jpg public/onboarding-property-photo.jpg"
   echo "put public/property-redress-scheme-logo.png public/property-redress-scheme-logo.png"
   echo "put public/ico-registered-badge.png public/ico-registered-badge.png"
+  echo "put public/lauren-moss-business-card-qr.svg public/lauren-moss-business-card-qr.svg"
+  echo "put public/lauren-moss-business-card-qr.png public/lauren-moss-business-card-qr.png"
   echo "put public/property-redress-scheme-certificate.pdf public/property-redress-scheme-certificate.pdf"
   echo "put public/ico-registration-certificate-zc196423.pdf public/ico-registration-certificate-zc196423.pdf"
   for file in "${optional_files[@]}"; do
@@ -107,6 +114,8 @@ trap cleanup EXIT
       echo "put $file $file"
     fi
   done
+  echo "put business-card/index.html business-card/index.html"
+  echo "put business-card/lauren-moss.vcf business-card/lauren-moss.vcf"
   echo "put privacy/index.html privacy/index.html"
   echo "put thank-you/index.html thank-you/index.html"
   echo "put landlords/index.html landlords/index.html"
