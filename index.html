@@ -373,7 +373,7 @@
             </div>
             <div class="contact-method">
               <span>Mobile / WhatsApp</span>
-              <a href="tel:+447785941746" aria-label="Call our mobile: +44 7785 941746">
+              <a id="mobile-contact-link" href="tel:+447785941746" aria-label="Call our mobile: +44 7785 941746">
                 +44 7785 941746
               </a>
             </div>
@@ -422,6 +422,22 @@
         </div>
       </footer>
     </main>
+    <script>
+      (function () {
+        var link = document.getElementById("mobile-contact-link");
+        var userAgent = navigator.userAgent || "";
+        // iPadOS can identify itself as a Mac when requesting desktop pages.
+        var isPhoneOrTablet = /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(userAgent) ||
+          (/Macintosh/i.test(userAgent) && navigator.maxTouchPoints > 1);
+
+        if (!isPhoneOrTablet) {
+          link.href = "https://web.whatsapp.com/send?phone=447785941746";
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.setAttribute("aria-label", "Message us on WhatsApp Web: +44 7785 941746");
+        }
+      }());
+    </script>
     <script async src="https://tally.so/widgets/embed.js"></script>
   </body>
 </html>
